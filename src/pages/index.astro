@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro"
+import BrandLogo from '/public/images/brandlogo.png'
+import { Image } from 'astro:assets';
+import BgVideo from '/public/videos/bg-video.mp4'
+---
+
+<Layout title="Bienvenido a SummerFest">
+    <main class="relative min-h-screen bg-black/50 flex flex-col justify-between">
+        <video class="w-fit min-w-screen h-full absolute -z-10 border-2 border-white" src={BgVideo} controls autoplay muted loop></video>
+
+        <div class="pt-8">
+            <Image class="w-[240px] h-[100px] mx-auto object-cover" src={BrandLogo} alt="Imagen oficial de la marca" width={240} height={100} />
+            <h1 class="uppercase text-3xl text-center font-bold">Frase <br>expectativa/<br>Curiosidad</h1>
+        </div>
+    
+        <div class="w-full flex flex-col justify-center gap-4 mt-8 pb-28 [&>a]:w-full [&>a]:max-w-[150px] [&>a]:text-center [&>a]:mx-auto [&>a]:bg-white [&>a]:text-black [&>a]:text-lg [&>a]:font-regular [&>a]:tracking-wider [&>a]:px-4 [&>a]:py-2 [&>a]:rounded-full">
+            <a href="https://www.instagram.com/summer_tja/">Instagram</a>
+            <a href="/">TikTok</a>    
+        </div>
+    </main>
+</Layout>
